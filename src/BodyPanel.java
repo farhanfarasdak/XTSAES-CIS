@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import javax.swing.border.*;
 
-public class BodyPanel extends JPanel {
+public class BodyPanel extends JPanel implements ActionListener {
   private JLabel source, key, target, sourceFile, keyFile, targetFile;
   private JButton sourceButton, keyButton, targetButton;
 
