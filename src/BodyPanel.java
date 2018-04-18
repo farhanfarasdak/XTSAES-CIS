@@ -48,13 +48,19 @@ public class BodyPanel extends JPanel implements ActionListener {
     target.setLocation(10,170);            
     add(target);
 
-    sourceFile = new JLabel("yee");
+    sourceFile = new JLabel("");
     //sourceFile.setSize(source.getPreferredSize());
     sourceFile.setLocation(130,70);
     sourceFile.setSize(220,20);
     add(sourceFile);
 
-    targetFile = new JLabel("yeetarget");
+    keyFile = new JLabel("");
+    //sourceFile.setSize(source.getPreferredSize());
+    keyFile.setLocation(130,120);
+    keyFile.setSize(220,20);
+    add(keyFile);
+
+    targetFile = new JLabel("");
     //targetFile.setSize(source.getPreferredSize());
     targetFile.setLocation(130,170);
     targetFile.setSize(220,20);
@@ -71,7 +77,7 @@ public class BodyPanel extends JPanel implements ActionListener {
     keyButton = new JButton("Key");
     keyButton.setSize(150,20);
     keyButton.setLocation(400,120);
-    //keyButton.addActionListener(this);
+    keyButton.addActionListener(this);
     add(keyButton);
 
     targetButton = new JButton("Target");
@@ -95,17 +101,19 @@ public class BodyPanel extends JPanel implements ActionListener {
 
   public void actionPerformed(ActionEvent action) {
     if ( action.getSource() == sourceButton ) {
-      //farhanCodeHere
       OpenFile openFile = new OpenFile();
       sourceFileName = openFile.filePath;
       sourceFile.setText(sourceFileName);
     }
     else if ( action.getSource() == keyButton ) {
-      //irmaCodeHere
+      OpenFile openFile = new OpenFile();
+      keyFileName = openFile.filePath;
+      keyFile.setText(keyFileName);
     }
     else if ( action.getSource() == targetButton ) {
-      SaveFile saveFile = new SaveFile();
-      targetFile.setText(saveFile.filePath);
+      OpenFile openFile = new OpenFile();
+      targetFileName = openFile.filePath;
+      targetFile.setText(targetFileName);
     } 
     else if ( action.getSource() == encryptButton) {
 
