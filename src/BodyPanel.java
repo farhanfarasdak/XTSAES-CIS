@@ -39,7 +39,7 @@ public class BodyPanel extends JPanel implements ActionListener {
     key.setLocation(10,120);
     add(key);
 
-    target = new JLabel("Target       :");
+    target = new JLabel("Target         :");
     target.setHorizontalAlignment(SwingConstants.LEFT);
     target.setSize(220,20);
     target.setFont(new Font("Times New Roman",0,20));
@@ -53,6 +53,12 @@ public class BodyPanel extends JPanel implements ActionListener {
     sourceFile.setLocation(130,70);
     sourceFile.setSize(220,20);
     add(sourceFile);
+
+    targetFile = new JLabel("yeetarget");
+    //targetFile.setSize(source.getPreferredSize());
+    targetFile.setLocation(130,170);
+    targetFile.setSize(220,20);
+    add(targetFile);
   }
 
   public void initButton() {
@@ -71,7 +77,7 @@ public class BodyPanel extends JPanel implements ActionListener {
     targetButton = new JButton("Target");
     targetButton.setSize(150,20);
     targetButton.setLocation(400,170);
-    //targetButton.addActionListener(this);
+    targetButton.addActionListener(this);
     add(targetButton);
 
     encryptButton = new JButton("Enkripsi");
@@ -98,7 +104,8 @@ public class BodyPanel extends JPanel implements ActionListener {
       //irmaCodeHere
     }
     else if ( action.getSource() == targetButton ) {
-      //sabiqCodeHere
+      SaveFile saveFile = new SaveFile();
+      targetFile.setText(saveFile.filePath);
     } 
     else if ( action.getSource() == encryptButton) {
 
