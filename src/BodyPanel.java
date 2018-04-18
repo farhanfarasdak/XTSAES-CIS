@@ -1,6 +1,10 @@
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
-import java.awt.*;
-import javax.swing.border.*;
+import javax.swing.border.EtchedBorder;
 
 public class BodyPanel extends JPanel implements ActionListener {
   private JLabel source, key, target, sourceFile, keyFile, targetFile;
@@ -54,7 +58,7 @@ public class BodyPanel extends JPanel implements ActionListener {
     sourceButton = new JButton("Source");
     sourceButton.setSize(150,20);
     sourceButton.setLocation(400,70);
-    //sourceButton.addActionListener(this);
+    sourceButton.addActionListener(this);
     add(sourceButton);
     
     keyButton = new JButton("Key");
@@ -68,5 +72,13 @@ public class BodyPanel extends JPanel implements ActionListener {
     targetButton.setLocation(400,170);
     //targetButton.addActionListener(this);
     add(targetButton);
+  }
+
+  public void actionPerformed(ActionEvent action) {
+    if (action.getSource() == sourceButton){
+      OpenFile openFile = new OpenFile();
+      String fileName = openFile.filePath;
+      sourceFile.setText(fileName);
+    }
   }
 }
