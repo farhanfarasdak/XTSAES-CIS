@@ -8,7 +8,8 @@ import javax.swing.border.EtchedBorder;
 
 public class BodyPanel extends JPanel implements ActionListener {
   private JLabel source, key, target, sourceFile, keyFile, targetFile;
-  private JButton sourceButton, keyButton, targetButton;
+  private JButton sourceButton, keyButton, targetButton, encryptButton, decryptButton;
+  private String sourceFileName, keyFileName, targetFileName;
 
   public BodyPanel() {
     setLayout(null);
@@ -72,13 +73,38 @@ public class BodyPanel extends JPanel implements ActionListener {
     targetButton.setLocation(400,170);
     //targetButton.addActionListener(this);
     add(targetButton);
+
+    encryptButton = new JButton("Enkripsi");
+    encryptButton.setSize(100,20);
+    encryptButton.setLocation(350,230);
+    encryptButton.addActionListener(this);
+    add(encryptButton);
+
+    decryptButton = new JButton("Dekripsi");
+    decryptButton.setSize(100,20);
+    decryptButton.setLocation(190,230);
+    decryptButton.addActionListener(this);
+    add(decryptButton);
   }
 
   public void actionPerformed(ActionEvent action) {
-    if (action.getSource() == sourceButton){
+    if ( action.getSource() == sourceButton ) {
+      //farhanCodeHere
       OpenFile openFile = new OpenFile();
-      String fileName = openFile.filePath;
-      sourceFile.setText(fileName);
+      sourceFileName = openFile.filePath;
+      sourceFile.setText(sourceFileName);
+    }
+    else if ( action.getSource() == keyButton ) {
+      //irmaCodeHere
+    }
+    else if ( action.getSource() == targetButton ) {
+      //sabiqCodeHere
+    } 
+    else if ( action.getSource() == encryptButton) {
+
+    }
+    else if ( action.getSource() == decryptButton) {
+
     }
   }
 }
