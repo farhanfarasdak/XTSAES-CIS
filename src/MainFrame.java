@@ -1,0 +1,20 @@
+import java.awt.Color;
+import javax.swing.JFrame;
+
+public class MainFrame extends JFrame{
+	private HeaderPanel header = new HeaderPanel();
+	
+	public MainFrame() {
+    super( "Kriptografi dan Keamanan Jaringan - XTS AES" );
+    setDefaultCloseOperation( EXIT_ON_CLOSE );
+    setLayout(null);
+    setSize( 700, 420 );
+    setBackground(Color.blue);
+    setVisible( true );
+    setBounds(0,0,720,450);
+    setLocationRelativeTo(null);
+    setResizable(false);
+    getContentPane().add(header);
+    setVisible(true);		
+	}
+}
