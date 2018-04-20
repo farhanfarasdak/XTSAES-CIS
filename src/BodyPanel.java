@@ -116,10 +116,20 @@ public class BodyPanel extends JPanel implements ActionListener {
       targetFile.setText(targetFileName);
     } 
     else if ( action.getSource() == encryptButton) {
-
+      XTSAES encryption = new XTSAES(sourceFileName, keyFileName, targetFileName);
+      try {
+        encryption.setUpEncryption(sourceFileName, keyFileName, targetFileName);
+      } catch (Exception ex) {
+        Logger.getLogger(BodyPanel.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }
     else if ( action.getSource() == decryptButton) {
-
+      XTSAES decryption = new XTSAES(sourceFileName, keyFileName, targetFileName);
+      try {
+        decryption.setUpDecryption(sourceFileName, keyFileName, targetFileName);
+      } catch (Exception ex) {
+        Logger.getLogger(BodyPanel.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }
   }
 }
