@@ -1,6 +1,23 @@
 # XTSAES-CIS
 
-for contribute :
-git clone https://github.com/farhanfarasdak/XTSAES-CIS.git
+## Onboarding and Deidevelopment Guide
 
-english convention code is a must.
+1. Clone
+
+   ```
+   git clone https://github.com/farhanfarasdak/XTSAES-CIS.git
+   cd XTSAES-CIS
+   cd src
+   ```
+
+2. Compile
+
+   ```
+   'javac *.java
+   ```
+
+3. Run Application
+
+   ```
+   java Main
+   ```	
