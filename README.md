@@ -24,6 +24,6 @@
 
 ## Contact
 
-- [Farhan] (mailto:farhan.farasdak@gmail.com)
-- [Irma] (mailto:irma.latifatullaily@gmail.com)
-- [Sabiq] (mailto:msabiqd@gmail.com)
+- [Farhan](mailto:farhan.farasdak@gmail.com)
+- [Irma](mailto:irma.latifatullaily@gmail.com)
+- [Sabiq](mailto:msabiqd@gmail.com)
