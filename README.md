@@ -1,6 +1,6 @@
 # XTSAES-CIS
 
-## Onboarding and Development Guide
+## Onboarding and Running Application
 
 1. Clone
 
@@ -21,3 +21,9 @@
    ```
    java Main
    ```	
+
+## Contact
+
+- [Farhan] (mailto:farhan.farasdak@gmail.com)
+- [Irma] (mailto:irma.latifatullaily@gmail.com)
+- [Sabiq] (mailto:msabiqd@gmail.com)
