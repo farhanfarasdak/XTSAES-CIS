@@ -9,7 +9,7 @@ public class HeaderPanel extends JPanel {
 		initTitle();
     setLayout(new GridLayout(1,1));
     setBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED));
-    setLocation(10,10);
+    setLocation(20,15);
     setSize(675,80);
     setBackground(Color.PINK);
     add(title);

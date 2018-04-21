@@ -17,7 +17,7 @@ public class XTSAES {
         this.TARGET_FILE = targetFile;
     }
 
-    public void setUpEncryption (String plaintextFile, String keyFile, String ciphertextFile) throws Exception{
+    public String setUpEncryption (String plaintextFile, String keyFile, String ciphertextFile) throws Exception{
         String keyStr;
         
         
@@ -41,9 +41,11 @@ public class XTSAES {
         docCiphertext.close();
 
         System.out.println("Ecryption Done!");
+
+        return "Encryption Done!";
     }
 
-    public void setUpDecryption (String ciphertextFile, String keyFile, String plaintextFile) throws Exception{
+    public String setUpDecryption (String ciphertextFile, String keyFile, String plaintextFile) throws Exception{
         String keyStr;
         
         
@@ -67,6 +69,8 @@ public class XTSAES {
         docCiphertext.close();
 
         System.out.println("Decryption Done!");
+        
+        return "Decryption Done!";
     }
 
     public void encrypt(byte[] plaintext, RandomAccessFile docCiphertext, SecretKey key) throws Exception {
