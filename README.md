@@ -1,6 +1,6 @@
 # XTSAES-CIS
 
-## Onboarding and Deidevelopment Guide
+## Onboarding and Development Guide
 
 1. Clone
 
@@ -13,7 +13,7 @@
 2. Compile
 
    ```
-   'javac *.java
+   javac *.java
    ```
 
 3. Run Application
